@@ -31,11 +31,11 @@ struct SettingsView: View {
 				Button {
 					requestReview()
 				} label: {
-					SettingButton(icon: .star, title: "Оставить отзыв", chevronDirection: .right)
+					SettingButton(icon: .star, title: "Оставить отзыв", chevronDirection: .down)
 				}
 
-				Button {
-					// Support mock
+				NavigationLink {
+					SupportView()
 				} label: {
 					SettingButton(icon: .globe, title: "Поддержка", chevronDirection: .right)
 				}
@@ -44,6 +44,7 @@ struct SettingsView: View {
 			Spacer()
 		}
 		.padding(.horizontal, 32)
+		.background(Color.background0)
     }
 
 	private func openAppSettings() {
@@ -58,5 +59,7 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+	NavigationView {
+		SettingsView()
+	}
 }

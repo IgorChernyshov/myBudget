@@ -31,7 +31,7 @@ struct SettingButton: View {
 			.foregroundStyle(Color.textPrimary)
 			.padding()
 		}
-		.frame(width: .infinity, height: 48)
+		.frame(height: 48)
 		.cornerRadius(24)
     }
 }

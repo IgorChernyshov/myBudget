@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct MyBudgetApp: App {
+
+	init() {
+		UITabBar.appearance().backgroundColor = UIColor(Color.background1)
+	}
+
     var body: some Scene {
         WindowGroup {
             MainView()

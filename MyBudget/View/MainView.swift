@@ -24,7 +24,7 @@ struct MainView: View {
 						Text("Сканировать чек")
 					}
 
-				Text("Экран разделить чек")
+				ContactsView()
 					.tabItem {
 						Image(systemName: "person.2")
 						Text("Разделить чек")

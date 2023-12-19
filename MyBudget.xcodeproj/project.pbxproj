@@ -21,6 +21,8 @@
 		CFC5C5A72B31AEE600C1ECD6 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5A62B31AEE600C1ECD6 /* BubbleView.swift */; };
 		CFC5C5AA2B31B69400C1ECD6 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5A92B31B69400C1ECD6 /* ContactsView.swift */; };
 		CFC5C5AE2B31BC2200C1ECD6 /* ContactBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5AD2B31BC2200C1ECD6 /* ContactBubbleView.swift */; };
+		CFC5C5B42B31D20400C1ECD6 /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B32B31D20400C1ECD6 /* PurchasesView.swift */; };
+		CFC5C5B62B31D24900C1ECD6 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		CFC5C5A62B31AEE600C1ECD6 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		CFC5C5A92B31B69400C1ECD6 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		CFC5C5AD2B31BC2200C1ECD6 /* ContactBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBubbleView.swift; sourceTree = "<group>"; };
+		CFC5C5B32B31D20400C1ECD6 /* PurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
+		CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC5C58D2B318F5000C1ECD6 /* Tab.swift */,
+				CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				CFC5C57F2B318DE000C1ECD6 /* MainView.swift */,
 				CFC5C5A82B31B68900C1ECD6 /* Contacts */,
 				CFC5C5942B3196A600C1ECD6 /* General */,
+				CFC5C5B22B31D09000C1ECD6 /* Purchases */,
 				CFC5C5912B31959000C1ECD6 /* Settings */,
 				CFC5C5A12B31A44600C1ECD6 /* Support */,
 			);
@@ -159,6 +165,14 @@
 				CFC5C5AD2B31BC2200C1ECD6 /* ContactBubbleView.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		CFC5C5B22B31D09000C1ECD6 /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5B32B31D20400C1ECD6 /* PurchasesView.swift */,
+			);
+			path = Purchases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +251,11 @@
 				CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */,
 				CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */,
 				CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */,
+				CFC5C5B42B31D20400C1ECD6 /* PurchasesView.swift in Sources */,
 				CFC5C5A42B31AECA00C1ECD6 /* String+Identifiable.swift in Sources */,
 				CFC5C5932B31965F00C1ECD6 /* SettingButton.swift in Sources */,
 				CFC5C5A02B31A42A00C1ECD6 /* SupportView.swift in Sources */,
+				CFC5C5B62B31D24900C1ECD6 /* Purchase.swift in Sources */,
 				CFC5C59A2B3196FC00C1ECD6 /* ConditionalViewModifier.swift in Sources */,
 				CFC5C5AA2B31B69400C1ECD6 /* ContactsView.swift in Sources */,
 				CFC5C57E2B318DE000C1ECD6 /* MyBudgetApp.swift in Sources */,
@@ -380,6 +396,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSContactsUsageDescription = "Нам нужен доступ к вашим контактам, чтобы выбрать человека, с которым делить счёт";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Нам нужен доступ к Face ID для размаскирования сумм покупок";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -413,6 +430,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSContactsUsageDescription = "Нам нужен доступ к вашим контактам, чтобы выбрать человека, с которым делить счёт";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Нам нужен доступ к Face ID для размаскирования сумм покупок";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

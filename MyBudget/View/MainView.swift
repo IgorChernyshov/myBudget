@@ -12,22 +12,22 @@ struct MainView: View {
 	var body: some View {
 		NavigationView {
 			TabView {
-				Text("Экран трат")
+				PurchasesView()
 					.tabItem {
 						Image(systemName: "doc.plaintext")
-						Text("Траты")
+						Text("Покупки")
 					}
 
 				Text("Экран скана")
 					.tabItem {
 						Image(systemName: "doc.text.viewfinder")
-						Text("Сканировать чек")
+						Text("Добавить")
 					}
 
 				ContactsView()
 					.tabItem {
 						Image(systemName: "person.2")
-						Text("Разделить чек")
+						Text("Разделить")
 					}
 
 				SettingsView()

@@ -22,7 +22,7 @@ struct SettingButton: View {
 					.foregroundStyle(Color.textSecondary)
 
 				Text(title)
-					.font(.system(size: 20, weight: .bold))
+					.font(.system(size: 20, weight: .semibold))
 
 				Spacer()
 

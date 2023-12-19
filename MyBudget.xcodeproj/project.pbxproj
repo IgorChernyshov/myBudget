@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		CFC5C57E2B318DE000C1ECD6 /* MyBudgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C57D2B318DE000C1ECD6 /* MyBudgetApp.swift */; };
-		CFC5C5802B318DE000C1ECD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C57F2B318DE000C1ECD6 /* ContentView.swift */; };
+		CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C57F2B318DE000C1ECD6 /* MainView.swift */; };
 		CFC5C5822B318DE200C1ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC5C5812B318DE200C1ECD6 /* Assets.xcassets */; };
 		CFC5C5852B318DE200C1ECD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC5C5842B318DE200C1ECD6 /* Preview Assets.xcassets */; };
+		CFC5C58E2B318F5000C1ECD6 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C58D2B318F5000C1ECD6 /* Tab.swift */; };
+		CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C58F2B31954000C1ECD6 /* SettingsView.swift */; };
+		CFC5C5932B31965F00C1ECD6 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5922B31965F00C1ECD6 /* SettingButton.swift */; };
+		CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5952B3196BA00C1ECD6 /* ChevronIcon.swift */; };
+		CFC5C59A2B3196FC00C1ECD6 /* ConditionalViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5992B3196FC00C1ECD6 /* ConditionalViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CFC5C57A2B318DE000C1ECD6 /* MyBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC5C57D2B318DE000C1ECD6 /* MyBudgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudgetApp.swift; sourceTree = "<group>"; };
-		CFC5C57F2B318DE000C1ECD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CFC5C57F2B318DE000C1ECD6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CFC5C5812B318DE200C1ECD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFC5C5842B318DE200C1ECD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFC5C58D2B318F5000C1ECD6 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		CFC5C58F2B31954000C1ECD6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CFC5C5922B31965F00C1ECD6 /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
+		CFC5C5952B3196BA00C1ECD6 /* ChevronIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronIcon.swift; sourceTree = "<group>"; };
+		CFC5C5992B3196FC00C1ECD6 /* ConditionalViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				CFC5C57D2B318DE000C1ECD6 /* MyBudgetApp.swift */,
-				CFC5C57F2B318DE000C1ECD6 /* ContentView.swift */,
-				CFC5C5812B318DE200C1ECD6 /* Assets.xcassets */,
+				CFC5C58B2B318F4200C1ECD6 /* Model */,
+				CFC5C58C2B318F4700C1ECD6 /* View */,
+				CFC5C59C2B3198B000C1ECD6 /* Resources */,
 				CFC5C5832B318DE200C1ECD6 /* Preview Content */,
 			);
 			path = MyBudget;
@@ -65,6 +76,50 @@
 				CFC5C5842B318DE200C1ECD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFC5C58B2B318F4200C1ECD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C58D2B318F5000C1ECD6 /* Tab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFC5C58C2B318F4700C1ECD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C57F2B318DE000C1ECD6 /* MainView.swift */,
+				CFC5C5942B3196A600C1ECD6 /* General */,
+				CFC5C5912B31959000C1ECD6 /* Settings */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFC5C5912B31959000C1ECD6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C58F2B31954000C1ECD6 /* SettingsView.swift */,
+				CFC5C5922B31965F00C1ECD6 /* SettingButton.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CFC5C5942B3196A600C1ECD6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5952B3196BA00C1ECD6 /* ChevronIcon.swift */,
+				CFC5C5992B3196FC00C1ECD6 /* ConditionalViewModifier.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		CFC5C59C2B3198B000C1ECD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5812B318DE200C1ECD6 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFC5C5802B318DE000C1ECD6 /* ContentView.swift in Sources */,
+				CFC5C58E2B318F5000C1ECD6 /* Tab.swift in Sources */,
+				CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */,
+				CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */,
+				CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */,
+				CFC5C5932B31965F00C1ECD6 /* SettingButton.swift in Sources */,
+				CFC5C59A2B3196FC00C1ECD6 /* ConditionalViewModifier.swift in Sources */,
 				CFC5C57E2B318DE000C1ECD6 /* MyBudgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

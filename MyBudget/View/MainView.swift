@@ -24,10 +24,11 @@ struct MainView: View {
 						Text("Добавить")
 					}
 
-				ContactsView()
+//				PurchaseMapView()
+				Text("Карта покупок")
 					.tabItem {
-						Image(systemName: "person.2")
-						Text("Разделить")
+						Image(systemName: "globe")
+						Text("Карта покупок")
 					}
 
 				SettingsView()

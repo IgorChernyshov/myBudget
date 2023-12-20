@@ -28,18 +28,19 @@ struct PurchaseView: View {
 
 				Spacer()
 
-				if purchase.location != nil {
-					Image(systemName: "globe")
-				}
-
 				if purchase.image != nil {
 					Image(systemName: "photo")
 				}
 
-				// if purchase.isShared
+				if purchase.location != nil {
+					Image(systemName: "globe")
+				}
+
+				if purchase.sharedWith != nil {
+					Image(systemName: "person.2")
+				}
 
 				ChevronIcon(direction: .right)
-					.padding(.leading)
 			}
 			.font(.system(size: 16))
 			.frame(maxWidth: .infinity)
@@ -55,5 +56,5 @@ struct PurchaseView: View {
 }
 
 #Preview {
-	PurchaseView(isMasked: .constant(false), purchase: .makePreview(withLocation: true, withImage: true))
+	PurchaseView(isMasked: .constant(false), purchase: .makePreview(isShared: true, withLocation: true, withImage: true))
 }

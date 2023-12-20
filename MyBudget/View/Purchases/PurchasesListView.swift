@@ -13,9 +13,9 @@ struct PurchasesListView: View {
 	@State private var isMasked = true
 
 	@State private var purchases: [Purchase] = [
-		Purchase.makePreview(withLocation: true, withImage: false),
-		Purchase.makePreview(withLocation: false, withImage: false),
-		Purchase.makePreview(withLocation: true, withImage: true)
+		Purchase.makePreview(isShared: false, withLocation: true, withImage: false),
+		Purchase.makePreview(isShared: true, withLocation: false, withImage: false),
+		Purchase.makePreview(isShared: true, withLocation: true, withImage: true)
 	]
 
     var body: some View {
@@ -51,7 +51,7 @@ struct PurchasesListView: View {
 
 				Spacer()
 
-				let sum = isMasked ? "*****" : purchases.reduce(into: 0, { $0 += $1.sum }).formatted()
+				let sum = isMasked ? "*****" : purchases.reduce(into: 0, { $0 += $1.totalSum }).formatted()
 				Text("\(sum) ₽")
 			}
 			.font(.system(size: 16, weight: .semibold))

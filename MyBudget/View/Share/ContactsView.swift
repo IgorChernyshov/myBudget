@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ContactsView: View {
 
+	@Binding var isContactsViewPresented: Bool
+	@Binding var pickedContact: String?
+
 	@State private var contactStore = CNContactStore()
 	@State private var contacts = [CNContact]()
 
@@ -21,14 +24,29 @@ struct ContactsView: View {
 					.foregroundStyle(Color.textPrimary)
 
 				Spacer()
+
+				Button {
+					isContactsViewPresented = false
+				} label: {
+					Text("Отмена")
+						.font(.system(size: 16, weight: .semibold))
+						.foregroundStyle(Color.textPrimary)
+				}
+				.padding(.horizontal, 16)
 			}
 
 			Spacer()
 
 			ScrollView(.vertical) {
 				ForEach(contacts, id: \.identifier) { contact in
-					ContactBubbleView(name: "\(contact.givenName) \(contact.familyName)",
-									  phone: contact.phoneNumbers.first?.value.stringValue)
+					let contactName = "\(contact.givenName) \(contact.familyName)"
+					Button {
+						pickedContact = contactName
+						isContactsViewPresented = false
+					} label: {
+						ContactBubbleView(name: contactName,
+										  phone: contact.phoneNumbers.first?.value.stringValue)
+					}
 				}
 			}
 
@@ -57,5 +75,5 @@ struct ContactsView: View {
 }
 
 #Preview {
-	ContactsView()
+	ContactsView(isContactsViewPresented: .constant(true), pickedContact: .constant(""))
 }

@@ -24,7 +24,11 @@ struct PurchaseDetailsView: View {
 
 					Text("В категории \(purchase.category.rawValue)")
 
-					Text("Стоимость \(purchase.sum.formatted()) ₽")
+					Text("Стоимость \(purchase.totalSum.formatted()) ₽")
+
+					if let sharedWith = purchase.sharedWith {
+						Text("Куплено пополам с \(sharedWith)")
+					}
 
 					if let image = purchase.image {
 						Text("Фото покупки:")
@@ -61,5 +65,5 @@ struct PurchaseDetailsView: View {
 }
 
 #Preview {
-	PurchaseDetailsView(purchase: .makePreview(withLocation: true, withImage: true))
+	PurchaseDetailsView(purchase: .makePreview(isShared: true, withLocation: true, withImage: true))
 }

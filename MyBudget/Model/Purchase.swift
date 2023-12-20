@@ -14,6 +14,7 @@ struct Purchase: Identifiable {
 	let date: Date
 	let sum: Decimal
 	let category: Category
+	let location: Location?
 
 	let image: UIImage?
 }

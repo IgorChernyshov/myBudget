@@ -11,9 +11,11 @@ struct AddPurchaseView: View {
 
 	@State private var name: String = ""
 	@State private var sum: String = ""
-	@State private var image: UIImage?
 	@State private var category: Purchase.Category = .miscellaneous
+	@State private var location: Purchase.Location?
+	@State private var image: UIImage?
 
+	@State private var isMapViewPresented = false
 	@State private var isCameraViewPresented = false
 	@State private var isGaleryViewPresented = false
 
@@ -40,6 +42,12 @@ struct AddPurchaseView: View {
 					Picker("Категория", selection: $category) {
 						ForEach(Purchase.Category.allCases, id: \.self) { category in
 							Text(category.rawValue)
+						}
+					}
+
+					Button("Где сделана покупка", systemImage: "globe") {
+						withAnimation {
+							isMapViewPresented.toggle()
 						}
 					}
 				}
@@ -88,8 +96,12 @@ struct AddPurchaseView: View {
 				.tint(Color.textPrimary)
 			}
 			.padding(.horizontal, 32)
+			.padding(.bottom, 16)
 		}
 		.background(Color.background0)
+		.fullScreenCover(isPresented: $isMapViewPresented) {
+			MapView(isMapViewPresented: $isMapViewPresented, selectedPlace: $location)
+		}
 		.fullScreenCover(isPresented: $isCameraViewPresented) {
 			CameraView(isCameraViewPresented: $isCameraViewPresented, capturedImage: $image)
 				.edgesIgnoringSafeArea(.all)

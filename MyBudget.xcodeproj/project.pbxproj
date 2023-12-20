@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF94D8A92B32E7C6007E545B /* CLLocationCoordinate2D+Convertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94D8A82B32E7C6007E545B /* CLLocationCoordinate2D+Convertion.swift */; };
 		CFC5C57E2B318DE000C1ECD6 /* MyBudgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C57D2B318DE000C1ECD6 /* MyBudgetApp.swift */; };
 		CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C57F2B318DE000C1ECD6 /* MainView.swift */; };
 		CFC5C5822B318DE200C1ECD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC5C5812B318DE200C1ECD6 /* Assets.xcassets */; };
@@ -28,9 +29,13 @@
 		CFC5C5BA2B32B35A00C1ECD6 /* ListBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */; };
 		CFC5C5BC2B32BE2D00C1ECD6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */; };
 		CFC5C5C22B32C4C300C1ECD6 /* Purchase.Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5C12B32C4C300C1ECD6 /* Purchase.Category.swift */; };
+		CFC5C5C52B32C9EB00C1ECD6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5C42B32C9EB00C1ECD6 /* MapView.swift */; };
+		CFC5C5C72B32CBA000C1ECD6 /* Purchase.Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5C62B32CBA000C1ECD6 /* Purchase.Location.swift */; };
+		CFC5C5CD2B32E24100C1ECD6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5CC2B32E24100C1ECD6 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF94D8A82B32E7C6007E545B /* CLLocationCoordinate2D+Convertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Convertion.swift"; sourceTree = "<group>"; };
 		CFC5C57A2B318DE000C1ECD6 /* MyBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC5C57D2B318DE000C1ECD6 /* MyBudgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudgetApp.swift; sourceTree = "<group>"; };
 		CFC5C57F2B318DE000C1ECD6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -53,6 +58,9 @@
 		CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBackgroundModifier.swift; sourceTree = "<group>"; };
 		CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		CFC5C5C12B32C4C300C1ECD6 /* Purchase.Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.Category.swift; sourceTree = "<group>"; };
+		CFC5C5C42B32C9EB00C1ECD6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CFC5C5C62B32CBA000C1ECD6 /* Purchase.Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.Location.swift; sourceTree = "<group>"; };
+		CFC5C5CC2B32E24100C1ECD6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 				CFC5C58D2B318F5000C1ECD6 /* Tab.swift */,
 				CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */,
 				CFC5C5C12B32C4C300C1ECD6 /* Purchase.Category.swift */,
+				CFC5C5C62B32CBA000C1ECD6 /* Purchase.Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				CFC5C5A32B31AECA00C1ECD6 /* String+Identifiable.swift */,
+				CF94D8A82B32E7C6007E545B /* CLLocationCoordinate2D+Convertion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +195,7 @@
 			children = (
 				CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */,
 				CFC5C5BF2B32BF8000C1ECD6 /* Camera */,
+				CFC5C5C32B32C9E000C1ECD6 /* Map */,
 				CFC5C5C02B32BF8700C1ECD6 /* Photo */,
 			);
 			path = AddPurchase;
@@ -212,6 +223,15 @@
 				CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		CFC5C5C32B32C9E000C1ECD6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5C42B32C9EB00C1ECD6 /* MapView.swift */,
+				CFC5C5CC2B32E24100C1ECD6 /* LocationManager.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +310,7 @@
 				CFC5C5C22B32C4C300C1ECD6 /* Purchase.Category.swift in Sources */,
 				CFC5C58E2B318F5000C1ECD6 /* Tab.swift in Sources */,
 				CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */,
+				CFC5C5C72B32CBA000C1ECD6 /* Purchase.Location.swift in Sources */,
 				CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */,
 				CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */,
 				CFC5C5BC2B32BE2D00C1ECD6 /* GalleryView.swift in Sources */,
@@ -297,10 +318,13 @@
 				CFC5C5B42B31D20400C1ECD6 /* PurchasesView.swift in Sources */,
 				CFC5C5A42B31AECA00C1ECD6 /* String+Identifiable.swift in Sources */,
 				CFC5C5932B31965F00C1ECD6 /* SettingButton.swift in Sources */,
+				CFC5C5CD2B32E24100C1ECD6 /* LocationManager.swift in Sources */,
 				CFC5C5A02B31A42A00C1ECD6 /* SupportView.swift in Sources */,
 				CFC5C5B62B31D24900C1ECD6 /* Purchase.swift in Sources */,
 				CFC5C59A2B3196FC00C1ECD6 /* ConditionalViewModifier.swift in Sources */,
 				CFC5C5AA2B31B69400C1ECD6 /* ContactsView.swift in Sources */,
+				CFC5C5C52B32C9EB00C1ECD6 /* MapView.swift in Sources */,
+				CF94D8A92B32E7C6007E545B /* CLLocationCoordinate2D+Convertion.swift in Sources */,
 				CFC5C57E2B318DE000C1ECD6 /* MyBudgetApp.swift in Sources */,
 				CFC5C5B82B32A91300C1ECD6 /* AddPurchaseView.swift in Sources */,
 			);
@@ -442,6 +466,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Нам нужен доступ к камере, чтобы сделать фото покупки";
 				INFOPLIST_KEY_NSContactsUsageDescription = "Нам нужен доступ к вашим контактам, чтобы выбрать человека, с которым делить счёт";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Нам нужен доступ к Face ID для размаскирования сумм покупок";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нам нужен доступ к вашей локации, чтобы определить, где совершена покупка";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Нам нужен доступ к вашим фото, чтобы вы могли выбрать из них фото покупки";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +503,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Нам нужен доступ к камере, чтобы сделать фото покупки";
 				INFOPLIST_KEY_NSContactsUsageDescription = "Нам нужен доступ к вашим контактам, чтобы выбрать человека, с которым делить счёт";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Нам нужен доступ к Face ID для размаскирования сумм покупок";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нам нужен доступ к вашей локации, чтобы определить, где совершена покупка";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Нам нужен доступ к вашим фото, чтобы вы могли выбрать из них фото покупки";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

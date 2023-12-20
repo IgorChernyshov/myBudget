@@ -12,7 +12,7 @@ struct MainView: View {
 	var body: some View {
 		NavigationView {
 			TabView {
-				PurchasesView()
+				PurchasesListView()
 					.tabItem {
 						Image(systemName: "doc.plaintext")
 						Text("Покупки")

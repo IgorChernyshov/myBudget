@@ -12,7 +12,7 @@ extension Purchase {
 		case clothing = "Одежда"
 		case electronics = "Электроника"
 		case homeAndFurniture = "Дом и мебель"
-		case healthAndWellness = "Здоровье и красота"
+		case health = "Здоровье"
 		case entertainment = "Развлечения"
 		case diningOut = "Рестораны"
 		case transportation = "Транспорт"
@@ -21,7 +21,7 @@ extension Purchase {
 		case gifts = "Подарки"
 		case hobbies = "Хобби"
 		case subscriptions = "Подписки"
-		case charityAndDonations = "Благотворительность"
+		case charity = "Благотворительность"
 		case savings = "Накопления"
 		case miscellaneous = "Другое"
 	}

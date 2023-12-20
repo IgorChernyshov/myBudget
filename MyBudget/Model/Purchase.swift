@@ -18,3 +18,18 @@ struct Purchase: Identifiable {
 
 	let image: UIImage?
 }
+
+extension Purchase {
+	static var previewWithLocationAndImage: Self {
+		makePreview(withLocation: true, withImage: true)
+	}
+
+	static func makePreview(withLocation: Bool, withImage: Bool) -> Self {
+		.init(name: "Foo",
+			  date: .now,
+			  sum: 300,
+			  category: Category.allCases.randomElement() ?? .miscellaneous,
+			  location: withLocation ? .init(id: UUID(), latitude: 1, longitude: 1) : nil,
+			  image: withImage ? UIImage() : nil)
+	}
+}

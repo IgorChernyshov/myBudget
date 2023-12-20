@@ -1,5 +1,5 @@
 //
-//  PurchasesView.swift
+//  PurchasesListView.swift
 //  MyBudget
 //
 //  Created by Игорь Чернышов on 19.12.2023.
@@ -8,14 +8,14 @@
 import LocalAuthentication
 import SwiftUI
 
-struct PurchasesView: View {
+struct PurchasesListView: View {
 
 	@State private var isMasked = true
 
 	@State private var purchases: [Purchase] = [
-		.init(name: "Foo", date: .now, sum: 30, category: .clothing, location: nil, image: nil),
-		.init(name: "Bar", date: .now, sum: 300, category: .healthAndWellness, location: nil, image: nil),
-		.init(name: "Foo Bar", date: .now, sum: 3000, category: .clothing, location: nil, image: nil)
+		Purchase.makePreview(withLocation: true, withImage: false),
+		Purchase.makePreview(withLocation: false, withImage: false),
+		Purchase.makePreview(withLocation: true, withImage: true)
 	]
 
     var body: some View {
@@ -40,25 +40,7 @@ struct PurchasesView: View {
 
 			ScrollView(.vertical) {
 				ForEach(purchases) { purchase in
-					HStack {
-						VStack(alignment: .leading) {
-							let sum = isMasked ? "*****" : purchase.sum.formatted()
-							Text("\(purchase.name): \(sum) ₽")
-
-							Text(purchase.date.formatted(date: .abbreviated, time: .shortened))
-								.foregroundStyle(Color.textSecondary)
-						}
-
-						Spacer()
-					}
-					.font(.system(size: 16))
-					.frame(maxWidth: .infinity)
-					.padding(16)
-					.background {
-						Color.background1
-							.opacity(0.8)
-							.cornerRadius(16)
-					}
+					PurchaseView(isMasked: $isMasked, purchase: purchase)
 				}
 			}
 
@@ -99,5 +81,5 @@ struct PurchasesView: View {
 }
 
 #Preview {
-    PurchasesView()
+    PurchasesListView()
 }

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct Purchase: Identifiable {
 	let id = UUID()
+
 	let name: String
 	let date: Date
 	let sum: Decimal
+	let category: Category
 
-	// TODO: location
+	let image: UIImage?
 }

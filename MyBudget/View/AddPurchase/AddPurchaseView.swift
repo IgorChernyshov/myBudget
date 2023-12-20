@@ -12,6 +12,7 @@ struct AddPurchaseView: View {
 	@State private var name: String = ""
 	@State private var sum: String = ""
 	@State private var image: UIImage?
+	@State private var category: Purchase.Category = .miscellaneous
 
 	@State private var isCameraViewPresented = false
 	@State private var isGaleryViewPresented = false
@@ -35,6 +36,12 @@ struct AddPurchaseView: View {
 					TextField("Название", text: $name)
 
 					TextField("Сумма", text: $sum)
+
+					Picker("Категория", selection: $category) {
+						ForEach(Purchase.Category.allCases, id: \.self) { category in
+							Text(category.rawValue)
+						}
+					}
 				}
 				.listRowBackground(Color.background1)
 

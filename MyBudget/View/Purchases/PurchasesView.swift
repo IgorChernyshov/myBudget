@@ -13,9 +13,9 @@ struct PurchasesView: View {
 	@State private var isMasked = true
 
 	@State private var purchases: [Purchase] = [
-		.init(name: "Foo", date: .now, sum: 30),
-		.init(name: "Bar", date: .now, sum: 300),
-		.init(name: "Foo Bar", date: .now, sum: 3000)
+		.init(name: "Foo", date: .now, sum: 30, category: .clothing, image: nil),
+		.init(name: "Bar", date: .now, sum: 300, category: .healthAndWellness, image: nil),
+		.init(name: "Foo Bar", date: .now, sum: 3000, category: .clothing, image: nil)
 	]
 
     var body: some View {

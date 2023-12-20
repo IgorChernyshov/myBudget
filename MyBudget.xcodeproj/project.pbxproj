@@ -27,6 +27,7 @@
 		CFC5C5B82B32A91300C1ECD6 /* AddPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */; };
 		CFC5C5BA2B32B35A00C1ECD6 /* ListBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */; };
 		CFC5C5BC2B32BE2D00C1ECD6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */; };
+		CFC5C5C22B32C4C300C1ECD6 /* Purchase.Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5C12B32C4C300C1ECD6 /* Purchase.Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseView.swift; sourceTree = "<group>"; };
 		CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBackgroundModifier.swift; sourceTree = "<group>"; };
 		CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		CFC5C5C12B32C4C300C1ECD6 /* Purchase.Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				CFC5C58D2B318F5000C1ECD6 /* Tab.swift */,
 				CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */,
+				CFC5C5C12B32C4C300C1ECD6 /* Purchase.Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				CFC5C5A72B31AEE600C1ECD6 /* BubbleView.swift in Sources */,
 				CFC5C5AE2B31BC2200C1ECD6 /* ContactBubbleView.swift in Sources */,
 				CFC5C5B12B31C07100C1ECD6 /* CameraView.swift in Sources */,
+				CFC5C5C22B32C4C300C1ECD6 /* Purchase.Category.swift in Sources */,
 				CFC5C58E2B318F5000C1ECD6 /* Tab.swift in Sources */,
 				CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */,
 				CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */,

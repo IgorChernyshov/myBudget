@@ -13,6 +13,9 @@ struct AddPurchaseView: View {
 	@State private var sum: String = ""
 	@State private var image: UIImage?
 
+	@State private var isCameraViewPresented = false
+	@State private var isGaleryViewPresented = false
+
     var body: some View {
 		VStack {
 			HStack {
@@ -36,20 +39,28 @@ struct AddPurchaseView: View {
 				.listRowBackground(Color.background1)
 
 				Section("Фото покупки") {
-					NavigationLink {
-						CameraView(isCameraViewPresented: .constant(true), capturedImage: $image)
-					} label: {
-						Image(systemName: "camera")
+					if let image {
+						Image(uiImage: image)
+							.resizable()
+							.scaledToFit()
 
-						Text("Сделать фото")
-					}
+						Button("Удалить фото") {
+							withAnimation {
+								self.image = nil
+							}
+						}
+					} else {
+						Button("Сделать фото", systemImage: "camera") {
+							withAnimation {
+								isCameraViewPresented.toggle()
+							}
+						}
 
-					NavigationLink {
-
-					} label: {
-						Image(systemName: "photo.on.rectangle")
-
-						Text("Выбрать из галереи")
+						Button("Выбрать из галереи", systemImage: "photo.on.rectangle") {
+							withAnimation {
+								isGaleryViewPresented.toggle()
+							}
+						}
 					}
 				}
 				.listRowBackground(Color.background1)
@@ -62,7 +73,7 @@ struct AddPurchaseView: View {
 				Spacer()
 
 				Button {
-
+					// Save purchase
 				} label: {
 					Text("Готово")
 						.font(.system(size: 16, weight: .semibold))
@@ -72,6 +83,14 @@ struct AddPurchaseView: View {
 			.padding(.horizontal, 32)
 		}
 		.background(Color.background0)
+		.fullScreenCover(isPresented: $isCameraViewPresented) {
+			CameraView(isCameraViewPresented: $isCameraViewPresented, capturedImage: $image)
+				.edgesIgnoringSafeArea(.all)
+		}
+		.fullScreenCover(isPresented: $isGaleryViewPresented) {
+			GalleryView(selectedPhoto: $image)
+				.edgesIgnoringSafeArea(.all)
+		}
     }
 }
 

@@ -26,6 +26,7 @@
 		CFC5C5B62B31D24900C1ECD6 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */; };
 		CFC5C5B82B32A91300C1ECD6 /* AddPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */; };
 		CFC5C5BA2B32B35A00C1ECD6 /* ListBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */; };
+		CFC5C5BC2B32BE2D00C1ECD6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseView.swift; sourceTree = "<group>"; };
 		CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBackgroundModifier.swift; sourceTree = "<group>"; };
+		CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */,
-				CFC5C5B02B31C07100C1ECD6 /* CameraView.swift */,
+				CFC5C5BF2B32BF8000C1ECD6 /* Camera */,
+				CFC5C5C02B32BF8700C1ECD6 /* Photo */,
 			);
 			path = AddPurchase;
 			sourceTree = "<group>";
@@ -190,6 +193,22 @@
 				CFC5C5B32B31D20400C1ECD6 /* PurchasesView.swift */,
 			);
 			path = Purchases;
+			sourceTree = "<group>";
+		};
+		CFC5C5BF2B32BF8000C1ECD6 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5B02B31C07100C1ECD6 /* CameraView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		CFC5C5C02B32BF8700C1ECD6 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5BB2B32BE2D00C1ECD6 /* GalleryView.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +288,7 @@
 				CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */,
 				CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */,
 				CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */,
+				CFC5C5BC2B32BE2D00C1ECD6 /* GalleryView.swift in Sources */,
 				CFC5C5BA2B32B35A00C1ECD6 /* ListBackgroundModifier.swift in Sources */,
 				CFC5C5B42B31D20400C1ECD6 /* PurchasesView.swift in Sources */,
 				CFC5C5A42B31AECA00C1ECD6 /* String+Identifiable.swift in Sources */,
@@ -415,8 +435,10 @@
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Нам нужен доступ к камере, чтобы сделать фото покупки";
 				INFOPLIST_KEY_NSContactsUsageDescription = "Нам нужен доступ к вашим контактам, чтобы выбрать человека, с которым делить счёт";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Нам нужен доступ к Face ID для размаскирования сумм покупок";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Нам нужен доступ к вашим фото, чтобы вы могли выбрать из них фото покупки";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,8 +471,10 @@
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Нам нужен доступ к камере, чтобы сделать фото покупки";
 				INFOPLIST_KEY_NSContactsUsageDescription = "Нам нужен доступ к вашим контактам, чтобы выбрать человека, с которым делить счёт";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Нам нужен доступ к Face ID для размаскирования сумм покупок";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Нам нужен доступ к вашим фото, чтобы вы могли выбрать из них фото покупки";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

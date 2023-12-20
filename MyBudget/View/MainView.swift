@@ -20,7 +20,7 @@ struct MainView: View {
 
 				AddPurchaseView()
 					.tabItem {
-						Image(systemName: "doc.text.viewfinder")
+						Image(systemName: "cart.badge.plus")
 						Text("Добавить")
 					}
 

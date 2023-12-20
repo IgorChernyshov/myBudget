@@ -32,6 +32,7 @@ struct AddPurchaseView: View {
 
 				Button {
 					savePurchase()
+					UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 				} label: {
 					Text("Готово")
 						.font(.system(size: 16, weight: .semibold))
@@ -48,6 +49,7 @@ struct AddPurchaseView: View {
 					TextField("Название", text: $name)
 
 					TextField("Сумма", text: $sum)
+						.keyboardType(.numberPad)
 
 					Picker("Категория", selection: $category) {
 						ForEach(Purchase.Category.allCases, id: \.self) { category in
@@ -55,13 +57,13 @@ struct AddPurchaseView: View {
 						}
 					}
 
-					Button("Где сделана покупка", systemImage: "globe") {
+					Button("Где сделана покупка \(location != nil ? "✅" : "")", systemImage: "globe") {
 						withAnimation {
 							isMapViewPresented.toggle()
 						}
 					}
 
-					Button("Совместная покупка", systemImage: "person.2") {
+					Button("Совместная покупка \(sharedWith != nil ? "✅" : "")", systemImage: "person.2") {
 						withAnimation {
 							isContactsViewPresented.toggle()
 						}
@@ -132,6 +134,17 @@ struct AddPurchaseView: View {
 								imageName: imageName,
 								location: location)
 		FileStorage.shared.add(purchase)
+
+		resetFields()
+	}
+
+	private func resetFields() {
+		name = ""
+		sum = ""
+		category = .miscellaneous
+		image = nil
+		location = nil
+		sharedWith = nil
 	}
 }
 

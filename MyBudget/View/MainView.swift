@@ -24,8 +24,7 @@ struct MainView: View {
 						Text("Добавить")
 					}
 
-//				PurchaseMapView()
-				Text("Карта покупок")
+				PurchaseMapView()
 					.tabItem {
 						Image(systemName: "globe")
 						Text("Карта покупок")

@@ -38,12 +38,11 @@ struct SettingButton: View {
 
 extension SettingButton {
 	enum Icon: String {
-		case globe
 		case star = "star.fill"
 		case bubbles = "bubble.left.and.bubble.right"
 	}
 }
 
 #Preview {
-	SettingButton(icon: .globe, title: "Язык", chevronDirection: .right)
+	SettingButton(icon: .star, title: "Оценить", chevronDirection: .right)
 }

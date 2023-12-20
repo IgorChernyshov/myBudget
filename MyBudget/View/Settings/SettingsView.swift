@@ -23,12 +23,6 @@ struct SettingsView: View {
 
 			VStack {
 				Button {
-					openAppSettings()
-				} label: {
-					SettingButton(icon: .globe, title: "Язык", chevronDirection: .down)
-				}
-
-				Button {
 					requestReview()
 				} label: {
 					SettingButton(icon: .star, title: "Оставить отзыв", chevronDirection: .down)
@@ -37,7 +31,7 @@ struct SettingsView: View {
 				NavigationLink {
 					SupportView()
 				} label: {
-					SettingButton(icon: .globe, title: "Поддержка", chevronDirection: .right)
+					SettingButton(icon: .bubbles, title: "Поддержка", chevronDirection: .right)
 				}
 			}
 

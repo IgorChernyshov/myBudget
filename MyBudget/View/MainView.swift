@@ -18,7 +18,7 @@ struct MainView: View {
 						Text("Покупки")
 					}
 
-				Text("Экран скана")
+				AddPurchaseView()
 					.tabItem {
 						Image(systemName: "doc.text.viewfinder")
 						Text("Добавить")

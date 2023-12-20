@@ -21,8 +21,11 @@
 		CFC5C5A72B31AEE600C1ECD6 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5A62B31AEE600C1ECD6 /* BubbleView.swift */; };
 		CFC5C5AA2B31B69400C1ECD6 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5A92B31B69400C1ECD6 /* ContactsView.swift */; };
 		CFC5C5AE2B31BC2200C1ECD6 /* ContactBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5AD2B31BC2200C1ECD6 /* ContactBubbleView.swift */; };
+		CFC5C5B12B31C07100C1ECD6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B02B31C07100C1ECD6 /* CameraView.swift */; };
 		CFC5C5B42B31D20400C1ECD6 /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B32B31D20400C1ECD6 /* PurchasesView.swift */; };
 		CFC5C5B62B31D24900C1ECD6 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */; };
+		CFC5C5B82B32A91300C1ECD6 /* AddPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */; };
+		CFC5C5BA2B32B35A00C1ECD6 /* ListBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +44,11 @@
 		CFC5C5A62B31AEE600C1ECD6 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		CFC5C5A92B31B69400C1ECD6 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		CFC5C5AD2B31BC2200C1ECD6 /* ContactBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBubbleView.swift; sourceTree = "<group>"; };
+		CFC5C5B02B31C07100C1ECD6 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		CFC5C5B32B31D20400C1ECD6 /* PurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
 		CFC5C5B52B31D24900C1ECD6 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseView.swift; sourceTree = "<group>"; };
+		CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBackgroundModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				CFC5C57F2B318DE000C1ECD6 /* MainView.swift */,
-				CFC5C5A82B31B68900C1ECD6 /* Contacts */,
-				CFC5C5942B3196A600C1ECD6 /* General */,
 				CFC5C5B22B31D09000C1ECD6 /* Purchases */,
+				CFC5C5AF2B31BFCA00C1ECD6 /* AddPurchase */,
+				CFC5C5A82B31B68900C1ECD6 /* Share */,
 				CFC5C5912B31959000C1ECD6 /* Settings */,
-				CFC5C5A12B31A44600C1ECD6 /* Support */,
+				CFC5C5942B3196A600C1ECD6 /* General */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +126,7 @@
 			children = (
 				CFC5C58F2B31954000C1ECD6 /* SettingsView.swift */,
 				CFC5C5922B31965F00C1ECD6 /* SettingButton.swift */,
+				CFC5C5A12B31A44600C1ECD6 /* Support */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 			children = (
 				CFC5C5952B3196BA00C1ECD6 /* ChevronIcon.swift */,
 				CFC5C5992B3196FC00C1ECD6 /* ConditionalViewModifier.swift */,
+				CFC5C5B92B32B35A00C1ECD6 /* ListBackgroundModifier.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -158,13 +166,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CFC5C5A82B31B68900C1ECD6 /* Contacts */ = {
+		CFC5C5A82B31B68900C1ECD6 /* Share */ = {
 			isa = PBXGroup;
 			children = (
 				CFC5C5A92B31B69400C1ECD6 /* ContactsView.swift */,
 				CFC5C5AD2B31BC2200C1ECD6 /* ContactBubbleView.swift */,
 			);
-			path = Contacts;
+			path = Share;
+			sourceTree = "<group>";
+		};
+		CFC5C5AF2B31BFCA00C1ECD6 /* AddPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				CFC5C5B72B32A91300C1ECD6 /* AddPurchaseView.swift */,
+				CFC5C5B02B31C07100C1ECD6 /* CameraView.swift */,
+			);
+			path = AddPurchase;
 			sourceTree = "<group>";
 		};
 		CFC5C5B22B31D09000C1ECD6 /* Purchases */ = {
@@ -247,10 +264,12 @@
 			files = (
 				CFC5C5A72B31AEE600C1ECD6 /* BubbleView.swift in Sources */,
 				CFC5C5AE2B31BC2200C1ECD6 /* ContactBubbleView.swift in Sources */,
+				CFC5C5B12B31C07100C1ECD6 /* CameraView.swift in Sources */,
 				CFC5C58E2B318F5000C1ECD6 /* Tab.swift in Sources */,
 				CFC5C5902B31954000C1ECD6 /* SettingsView.swift in Sources */,
 				CFC5C5962B3196BA00C1ECD6 /* ChevronIcon.swift in Sources */,
 				CFC5C5802B318DE000C1ECD6 /* MainView.swift in Sources */,
+				CFC5C5BA2B32B35A00C1ECD6 /* ListBackgroundModifier.swift in Sources */,
 				CFC5C5B42B31D20400C1ECD6 /* PurchasesView.swift in Sources */,
 				CFC5C5A42B31AECA00C1ECD6 /* String+Identifiable.swift in Sources */,
 				CFC5C5932B31965F00C1ECD6 /* SettingButton.swift in Sources */,
@@ -259,6 +278,7 @@
 				CFC5C59A2B3196FC00C1ECD6 /* ConditionalViewModifier.swift in Sources */,
 				CFC5C5AA2B31B69400C1ECD6 /* ContactsView.swift in Sources */,
 				CFC5C57E2B318DE000C1ECD6 /* MyBudgetApp.swift in Sources */,
+				CFC5C5B82B32A91300C1ECD6 /* AddPurchaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

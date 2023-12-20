@@ -31,7 +31,7 @@ struct AddPurchaseView: View {
 				Spacer()
 
 				Button {
-					// TODO: Save purchase
+					savePurchase()
 				} label: {
 					Text("Готово")
 						.font(.system(size: 16, weight: .semibold))
@@ -116,6 +116,23 @@ struct AddPurchaseView: View {
 				.edgesIgnoringSafeArea(.all)
 		}
     }
+
+	private func savePurchase() {
+		guard !name.isEmpty, !sum.isEmpty else { return }
+
+		let imageName = "Image\(name)\(sum)\(category)"
+		if let image {
+			FileStorage.shared.save(image, withName: imageName)
+		}
+
+		let purchase = Purchase(name: name,
+								sum: Decimal(string: sum) ?? 0,
+								category: category,
+								sharedWith: sharedWith,
+								imageName: imageName,
+								location: location)
+		FileStorage.shared.add(purchase)
+	}
 }
 
 #Preview {

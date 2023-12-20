@@ -12,11 +12,7 @@ struct PurchasesListView: View {
 
 	@State private var isMasked = true
 
-	@State private var purchases: [Purchase] = [
-		Purchase.makePreview(isShared: false, withLocation: true, withImage: false),
-		Purchase.makePreview(isShared: true, withLocation: false, withImage: false),
-		Purchase.makePreview(isShared: true, withLocation: true, withImage: true)
-	]
+	@ObservedObject private var fileStorage = FileStorage.shared
 
     var body: some View {
 		VStack {
@@ -39,7 +35,7 @@ struct PurchasesListView: View {
 			Spacer()
 
 			ScrollView(.vertical) {
-				ForEach(purchases) { purchase in
+				ForEach(fileStorage.purchases) { purchase in
 					PurchaseView(isMasked: $isMasked, purchase: purchase)
 				}
 			}
@@ -51,7 +47,7 @@ struct PurchasesListView: View {
 
 				Spacer()
 
-				let sum = isMasked ? "*****" : purchases.reduce(into: 0, { $0 += $1.totalSum }).formatted()
+				let sum = isMasked ? "*****" : fileStorage.purchases.reduce(into: 0, { $0 += $1.totalSum }).formatted()
 				Text("\(sum) ₽")
 			}
 			.font(.system(size: 16, weight: .semibold))

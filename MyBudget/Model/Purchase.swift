@@ -7,19 +7,23 @@
 
 import SwiftUI
 
-struct Purchase: Identifiable {
-	let id = UUID()
+struct Purchase: Identifiable, Codable {
+	var id = UUID()
 
 	let name: String
-	let date: Date
+	var date = Date.now
 	let sum: Decimal
 	let category: Category
 	let sharedWith: String?
-	let image: UIImage?
+	let imageName: String?
 	let location: Location?
 
 	var totalSum: Decimal {
 		sharedWith != nil ? sum / 2 : sum
+	}
+
+	var image: UIImage? {
+		FileStorage.shared.loadImage(withName: "Image\(name)\(sum)\(category)")
 	}
 }
 
@@ -30,11 +34,10 @@ extension Purchase {
 
 	static func makePreview(isShared: Bool, withLocation: Bool, withImage: Bool) -> Self {
 		.init(name: "Покупка",
-			  date: .now,
 			  sum: 300,
 			  category: Category.allCases.randomElement() ?? .miscellaneous, 
 			  sharedWith: isShared ? "Кем-то" : nil,
-			  image: withImage ? UIImage() : nil,
+			  imageName: withImage ? "Фото" : nil,
 			  location: withLocation ? .init(id: UUID(), latitude: 1, longitude: 1) : nil)
 	}
 }

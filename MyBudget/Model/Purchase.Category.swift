@@ -7,7 +7,7 @@
 
 extension Purchase {
 
-	enum Category: String, CaseIterable {
+	enum Category: String, CaseIterable, Codable {
 		case groceries = "Продукты"
 		case clothing = "Одежда"
 		case electronics = "Электроника"

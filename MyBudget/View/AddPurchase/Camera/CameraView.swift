@@ -37,7 +37,7 @@ extension CameraView {
 
 		func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 			if let image = info[.originalImage] as? UIImage {
-				parent.capturedImage = image
+				parent.capturedImage = resizeImage(image, targetSize: CGSize(width: 1280, height: 720))
 			}
 			dismissScreen()
 		}
@@ -50,6 +50,28 @@ extension CameraView {
 			withAnimation {
 				parent.isCameraViewPresented = false
 			}
+		}
+
+		private func resizeImage(_ image: UIImage, targetSize: CGSize) -> UIImage {
+			guard image.size.width != 0, image.size.height != 0 else { return image }
+
+			let size = image.size
+			let widthRatio = targetSize.width / size.width
+			let heightRatio = targetSize.height / size.height
+			let newSize: CGSize
+
+			if widthRatio > heightRatio {
+				newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+			} else {
+				newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+			}
+
+			let renderer = UIGraphicsImageRenderer(size: newSize)
+			let newImage = renderer.image { (context) in
+				image.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
+			}
+
+			return newImage
 		}
 	}
 }
